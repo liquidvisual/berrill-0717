@@ -1,0 +1,30 @@
+---
+layout: base
+---
+
+{% include hero_secondary.html %}
+
+{% if page.breadcrumbs %}
+	{% include snippets/breadcrumb.html %}
+{% endif %}
+
+<!-- CONTENT -->
+<main class="content">
+
+    <!-- BODY -->
+    <section class="section">
+        <div class="container">
+        	<div class="row justify-content-center">
+        		<div class="col-md-9">
+    				<p class="h5 text-center">{{ page.lead }}</p>
+    				<div class="spacer mb-4"></div>
+                    <div class="wysiwyg">
+                        {{ content }}
+                    </div>
+        		</div>
+        	</div>
+        </div>
+    </section>
+
+    {% contentblock content_additional no-convert %}
+</main>

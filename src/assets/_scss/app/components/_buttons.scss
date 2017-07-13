@@ -1,0 +1,127 @@
+/*
+    BUTTONS.CSS
+
+    - Last updated: 12.07.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+.anchor-link {
+	color: $brand-primary;
+	font-weight: 600;
+	transition: color 200ms ease;
+
+	&:hover {
+		color: lighten($brand-primary, 5%);
+	}
+}
+
+//-----------------------------------------------------------------
+// STRANGE FOR BOOTSTRAP
+//-----------------------------------------------------------------
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	white-space: normal;
+	border: 0;
+	min-width: rem-calc(160);
+	text-align: left;
+	font-size: rem-calc(13);
+	font-weight: 600;
+	text-transform: uppercase;
+
+	&.btn-lg { // used in form
+		display: block;
+		text-align: center;
+		font-size: rem-calc(16);
+		padding: rem-calc(16);
+		justify-content: center !important;
+	}
+
+	&.btn-dark {
+		background: $gray-dark;
+
+		&:hover {
+			background: lighten($gray-dark, 5%);
+		}
+	}
+
+	i {
+		font-size: rem-calc(22);
+		line-height: 0;
+		margin-left: auto;
+	}
+}
+
+//-----------------------------------------------------------------
+// CTA - USED IN HERO
+//-----------------------------------------------------------------
+
+.btn-cta {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding: rem-calc(15);
+	min-height: rem-calc(90);
+	background-color: #17a3de;
+	text-align: right;
+	color: white !important;
+	overflow: hidden;
+	transition: background-color 200ms ease;
+
+	@include media-breakpoint-up(md) {
+	    min-height: rem-calc(80);
+	}
+
+	@include media-breakpoint-up(xl) {
+	    height: rem-calc(88);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0;
+
+		@include media-breakpoint-down(lg) {
+			font-size: $font-size-h4;
+		}
+	}
+
+	i {
+		margin-left: rem-calc(15);
+		font-size: rem-calc(30);
+		line-height: 0;
+	}
+
+	&:hover {
+		@include media-breakpoint-up(xl) {
+		    background-color: rgba($brand-primary, 0.92) !important;
+		}
+	}
+}
+
+//=========================================
+// CONTEXT
+//=========================================
+
+ul li:nth-child(2) .btn-cta { background-color: #1599d2; }
+ul li:nth-child(3) .btn-cta { background-color: #1292c9; }
+ul li:nth-child(4) .btn-cta { background-color: #118bc0; }
+ul li:nth-child(n+5) .btn-cta { background-color: #0782b7; }
+
+.lv-hero {
+	ul li:nth-child(2) .btn-cta { background-color: #17a3de; }
+	ul li:nth-child(3) .btn-cta { background-color: #1dabe8; }
+	ul li:nth-child(4) .btn-cta { background-color: #30b5ed; }
+	ul li:nth-child(n+5) .btn-cta { background-color: #3dc3fc; }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

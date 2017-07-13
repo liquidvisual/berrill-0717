@@ -1,0 +1,17 @@
+---
+layout: base__page
+---
+
+{{ content }}
+
+{% contentfor content_additional %}
+	<!-- FEATURED SERVICES -->
+	<section class="section section-light">
+		<div class="container">
+			<h2 class="text-center">Our Expertise</h2>
+			{% include featured_services.html class="block-grid-md-2 px-lg-5" %}
+		</div>
+	</section>
+
+	{% include sections/supertalk_blog.html %}
+{% endcontentfor %}

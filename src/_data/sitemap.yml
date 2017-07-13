@@ -1,0 +1,58 @@
+- title: Home
+  url: /
+
+- title: About
+  url: /about/
+
+- title: Expertise
+  url: /expertise/
+  include_children_in_nav: true
+  children:
+    - title: TDP & Income Protection Claims
+      url: /expertise/death-and-terminal-illness-claims/
+      featured: true
+
+    - title: Death & Terminal Illness Claims
+      url: /expertise/death-and-terminal-illness-claims/
+      featured: true
+      include_children_in_nav: false
+      children:
+        - title: Another Page
+          url: '#'
+
+        - title: Second Level Page
+          url: '#'
+
+        - title: Page Example
+          url: '#'
+
+    - title: Superannuation & Insurance
+      url: /expertise/death-and-terminal-illness-claims/
+      featured: true
+
+    - title: General Insurance
+      url: /expertise/death-and-terminal-illness-claims/
+      featured: true
+
+    - title: Financial Advice Disputes
+      url: /expertise/death-and-terminal-illness-claims/
+      featured: true
+
+- title: Supertalk Blog
+  url: /blog/
+
+- title: Our People
+  url: /our-people/
+  include_children_in_nav: true
+  children:
+    - title: Tom Cobban
+      url: /our-people/our-people-item/
+    - title: Paul Watson
+      url: /our-people/our-people-item/
+    - title: Michael Bates
+      url: /our-people/our-people-item/
+    - title: John Berril
+      url: /our-people/our-people-item/
+
+- title: Contact
+  url: /contact/
