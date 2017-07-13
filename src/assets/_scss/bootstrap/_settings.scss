@@ -791,11 +791,11 @@ $input-color-placeholder:        lighten($gray, 30%) !default;
 
 // // Breadcrumbs
 
-// $breadcrumb-padding-y:          .75rem !default;
+$breadcrumb-padding-y:          rem-calc(10); //.75rem !default;
 // $breadcrumb-padding-x:          1rem !default;
 // $breadcrumb-item-padding:       .5rem !default;
 
-// $breadcrumb-bg:                 $gray-lighter !default;
+$breadcrumb-bg:                 $gray-lightest;
 // $breadcrumb-divider-color:      $gray-light !default;
 // $breadcrumb-active-color:       $gray-light !default;
 // $breadcrumb-divider:            "/" !default;

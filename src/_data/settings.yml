@@ -11,7 +11,7 @@ description: Berrill & Watson is a law firm for everyday people and businesses. 
 # DEVELOPER
 allow_robots: false
 github_repo_owner: liquidvisual
-github_repo_path: https://github.com/liquidvisual/berill-0717
+github_repo_path: https://github.com/liquidvisual/berrill-0717
 github_repo_name:
 jekyll_version: 3.5.0
 

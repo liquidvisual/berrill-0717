@@ -9,7 +9,7 @@
   include_children_in_nav: true
   children:
     - title: TDP & Income Protection Claims
-      url: /expertise/death-and-terminal-illness-claims/
+      url: '#/expertise/'
       featured: true
 
     - title: Death & Terminal Illness Claims
@@ -18,24 +18,22 @@
       include_children_in_nav: false
       children:
         - title: Another Page
-          url: '#'
-
+          url: /expertise/death-and-terminal-illness-claims/another-page/
         - title: Second Level Page
           url: '#'
-
         - title: Page Example
           url: '#'
 
     - title: Superannuation & Insurance
-      url: /expertise/death-and-terminal-illness-claims/
+      url: '#/expertise/'
       featured: true
 
     - title: General Insurance
-      url: /expertise/death-and-terminal-illness-claims/
+      url: '#/expertise/'
       featured: true
 
     - title: Financial Advice Disputes
-      url: /expertise/death-and-terminal-illness-claims/
+      url: '#/expertise/'
       featured: true
 
 - title: Supertalk Blog

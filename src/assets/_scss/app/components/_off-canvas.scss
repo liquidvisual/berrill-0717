@@ -1,7 +1,7 @@
 /*
     OFF-CANVAS.CSS
 
-    - Last updated: 27.06.17
+    - Last updated: 13.07.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -61,7 +61,7 @@ $hamburger-slit-height: 4px;
 		list-style: none;
 		padding: 0 0 50px 0;
 		margin: 0;
-		font-size: rem-calc(16);
+		font-size: 16px; //rem-calc(16);
 		overflow: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;

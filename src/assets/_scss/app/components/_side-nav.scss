@@ -1,35 +1,32 @@
 /*
     SIDE-NAV.CSS
 
-    - Last updated: 18.11.16
+    - Last updated: 13.07.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
-// Variables
+// VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// Side Nav
+// RESET UL
+//-----------------------------------------------------------------
+
+.side-nav,
+.side-nav ul {
+    padding: 0; // [RESET]
+    list-style: none; // [RESET]
+    font-size: rem-calc(15);
+
+    @include media-breakpoint-up(xxl) {
+        font-size: rem-calc(18);
+    }
+}
+
+//-----------------------------------------------------------------
+// SIDE NAV
 //-----------------------------------------------------------------
 
 .side-nav {
-    list-style: none;
-    padding: 0;
-    font-family: $font-family-sans-serif;
-    background: $brand-primary;
-
-    @include media-breakpoint-up(xl) {
-        // margin-right: rem-calc(70);
-    }
-
-    //-----------------------------------------------------------------
-    // UL
-    //-----------------------------------------------------------------
-
-    ul {
-        padding: 0;
-        list-style: none;
-    }
-
     //-----------------------------------------------------------------
     // NESTED
     //-----------------------------------------------------------------
@@ -38,8 +35,7 @@
         display: none;
     }
 
-    .active ul,
-    .active-parent ul {
+    .active-parent > ul {
         display: block;
     }
 
@@ -48,16 +44,20 @@
     //-----------------------------------------------------------------
 
     li {
-        padding: 0;
+        padding: 0; // [RESET]
         border-top: 1px solid white;
     }
 
-    ul ul li {
-        border-top: 1px solid white;
-    }
+    //=========================================
+    // OPTIONAL - TOP MOST
+    //=========================================
 
-    > li:last-child {
-        border-bottom: 1px solid white;
+    > li:first-child {
+        border: 0;
+
+        > a {
+            background-color: darken($brand-primary, 10%);
+        }
     }
 
     //-----------------------------------------------------------------
@@ -65,45 +65,29 @@
     //-----------------------------------------------------------------
 
     li > a {
-        padding: rem-calc(15 20);
-        font-size: rem-calc(18);
+        padding: em-calc(20);
     }
+
+    //=========================================
+    // THIRD LEVEL
+    //=========================================
 
     ul ul > li > a {
-        padding: rem-calc(15 25);
-        background: #0c4062;
+        background: $gray;
     }
 
     //-----------------------------------------------------------------
-    // ACTIVE ANCHORS
+    // ACTIVE ANCHORS | (\f105)
     //-----------------------------------------------------------------
-
-    .active > a {
-        background: #024f83;
-    }
 
     .active-parent > a {
-        background: #0c4062;
+        background: $gray-dark;
     }
 
-    //=========================================
-    // ARROWS
-    //=========================================
-
-    .active {
-        position: relative;
-        background: #024f83;
-
-        // &:after {
-        //     content: "\f105";
-        //     position: absolute;
-        //     top: 8px;
-        //     right: 15px;
-        //     font-family: "FontAwesome";
-        //     font-size: rem-calc(24);
-        //     font-weight: bold;
-        //     color: white;
-        // }
+    .active-parent .active-parent .active > a {
+        background: lighten($gray, 10%);
+        padding-left: em-calc(30);
+        padding-right: em-calc(30);
     }
 
     //=========================================
@@ -111,15 +95,16 @@
     //=========================================
 
     a {
-        display: block;
-        font-size: rem-calc(16);
+        display: flex;
+        background: $brand-primary;
+
         font-weight: 600;
         color: white;
-        transition: background ease 200ms;
+        transition: opacity ease 100ms;
 
         &:hover {
             @include media-breakpoint-up(xl) {
-                background: rgba(white, 0.1);
+                opacity: 0.9;
             }
         }
     }

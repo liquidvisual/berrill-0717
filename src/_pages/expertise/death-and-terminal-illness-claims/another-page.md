@@ -1,9 +1,10 @@
 ---
 layout: child_layout/expertise_item
-title: Death & Terminal Illness Claims
+title: Another Page
 title_override: Expertise
-permalink: /expertise/death-and-terminal-illness-claims/
+permalink: /expertise/death-and-terminal-illness-claims/another-page/
 hero: /assets/img/content/hero/hero-3.jpg
+breadcrumbs: true
 side_nav_id: 2
 lead: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
 ---
