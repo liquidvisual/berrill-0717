@@ -6,9 +6,14 @@
 		<ul class="block-grid-md-2 block-grid-lg-4 mb-4">
 			{% for item in site.data.lorem_ipsum limit: 4 %}
 				<li>
-					<a href="/blog/blog-item/">
+					<a href="/blog/blog-item/" class="btn-tile">
 						<article class="media-article">
-							<p class="mb-3"><img width="100%" src="/assets/img/content/placeholder-thumb-{{forloop.index}}.jpg" alt="{{ item.title }}"></p>
+
+							<div class="btn-tile-img mb-3">
+								<img width="100%" src="/assets/img/content/placeholder-thumb-{{forloop.index}}.jpg" alt="{{ item.title }}">
+								<span class="btn-tile-bg" style="background-image: url(/assets/img/content/placeholder-thumb-{{forloop.index}}.jpg)"></span>
+							</div>
+
 							<h5 class="mb-2">{{ item.title }}</h5>
 							<p><date>{{ item.date }}</date></p>
 							<p class="mb-1">{{ item.body | truncate: 150 }}</p>

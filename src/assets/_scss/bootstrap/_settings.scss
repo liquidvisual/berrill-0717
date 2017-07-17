@@ -228,7 +228,7 @@ $headings-font-weight:   600 !default;
 
 // $small-font-size: 80% !default;
 
-// $text-muted: $gray-light !default;
+$text-muted: lighten($gray, 10%) !default;
 
 // $abbr-border-color: $gray-light !default;
 

@@ -8,13 +8,41 @@
 // VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// PANEL
+// PANEL - Used on homepage
 //-----------------------------------------------------------------
 
 .panel {
+	position: relative;
     background: rgba(black, 0.52);
     padding: $spacer*1.5;
     overflow: hidden;
+    color: white;
+
+    @include media-breakpoint-down(xs) {
+        left: -15px;
+        width: calc(100% + 15px * 2);
+    }
+
+    a {
+    	color: white;
+    	font-weight: 400;
+    }
+}
+
+//-----------------------------------------------------------------
+// USED IN CONTACT
+//-----------------------------------------------------------------
+
+.panel-light {
+	// background: lighten($brand-primary, 5%);
+}
+
+.panel-lighter {
+	// background: #118bc0; //desaturate(darken($brand-primary, 10%), 20%);
+}
+
+.panel-lightest {
+	background: #4a535a;
 }
 
 //-----------------------------------------------------------------

@@ -15,7 +15,9 @@
 	margin-bottom: 0;
 
 	a {
-		color: $gray;
+		font-size: rem-calc(14);
+		font-weight: 600;
+		color: lighten($gray, 20%);
 
 		&:hover {
 			color: lighten($gray, 10%);
