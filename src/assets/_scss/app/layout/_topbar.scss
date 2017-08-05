@@ -76,8 +76,8 @@
     transition: background-color 200ms ease;
 
     &:hover {
-        background-color: rgba(black, 0.15);
-        color: white;
+        background-color: rgba(black, 0.1);
+        color: #222;
     }
 
     // Optional
@@ -101,7 +101,8 @@
 
 .lv-topbar .has-dropdown:hover > .top-parent-anchor {
     background: rgba(black, 0.15);
-    color: white;
+    // color: white;
+    color: #222;
 }
 
 .lv-topbar .active.has-dropdown:hover > .top-parent-anchor .text {

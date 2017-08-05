@@ -41,16 +41,16 @@ $('a[href*="#"]:not([href="#"], [href="#sitemap"])').click(function() {
 // OPEN SITEMAP (OPTIONAL)
 //-----------------------------------------------------------------
 
-if ($('a[href="#sitemap"]').length) {
-    $('a[href="#sitemap"]').click(function() {
-        var id = $(this).attr('href');
-        var endPos = $(id);
-        $('.fa-angle-down').toggleClass('is-active');
-        setTimeout(function(){
-            $.scrollTo(endPos.offset().top, 300);
-        }, 300);
-    });
-}
+// if ($('a[href="#sitemap"]').length) {
+//     $('a[href="#sitemap"]').click(function() {
+//         var id = $(this).attr('href');
+//         var endPos = $(id);
+//         $('.fa-angle-down').toggleClass('is-active');
+//         setTimeout(function(){
+//             $.scrollTo(endPos.offset().top, 300);
+//         }, 300);
+//     });
+// }
 
 //-----------------------------------------------------------------
 // HEADROOM.js

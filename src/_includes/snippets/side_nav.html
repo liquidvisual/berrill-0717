@@ -1,6 +1,6 @@
 {% comment %}
 
-    Updated: 13.07.17
+    Updated: 20.07.17
 
     - Notes:
 
@@ -39,7 +39,7 @@
         {% comment %} TOP LEVEL {% endcomment %}
         <li class="{% if top_level.url == page.url %} active {% endif %} active-parent ">
 
-            <a href="{{ top_level.url }}" class="{% if include_top_level == true %} d-none {% endif %}">{{ top_level.title }}</a>
+            <a href="{{ top_level.url }}" class="{% if include_top_level == false %} d-none {% endif %}">{{ top_level.title }}</a>
 
             <ul>
                 {% comment %} SECOND LEVEL {% endcomment %}
@@ -56,16 +56,16 @@
                     <li class="{% if item.url == page.url %} active-parent {% endif %} {{ active_parent }}">
                         <a href="{{ item.url }}">{{ item.title }}</a>
 
-                        <ul>
-                            {% comment %} THIRD LEVEL {% endcomment %}
-                            {% if item.children %}
+                        {% comment %} THIRD LEVEL {% endcomment %}
+                        {% if item.children %}
+                            <ul>
                                 {% for item in item.children %}
                                 <li class="{% if item.url == page.url %} active {% endif %}">
                                     <a href="{{ item.url }}">&nbsp;&nbsp;- {{ item.title }}</a>
                                 </li>
                                 {% endfor %}
-                            {% endif %}
-                        </ul>
+                            </ul>
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>

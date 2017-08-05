@@ -1,5 +1,21 @@
 ---
-layout: base__page_sidebar
+layout: base__page
 ---
 
-{{ content }}
+<div class="row justify-content-center">
+	<div class="col-lg-9">
+		<p class="h5 text-center px-xl-5">{{ page.lead }}</p>
+		<div class="spacer mb-4"></div>
+
+		<!-- WYSIWYG -->
+        <div class="wysiwyg mb-4">
+            {{ content }}
+        </div>
+
+        {% include featured_services.html class="block-grid-md-2" %}
+	</div>
+</div>
+
+{% contentfor content_additional %}
+	{% include sections/contact.html %}
+{% endcontentfor %}

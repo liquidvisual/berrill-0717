@@ -91,6 +91,16 @@ $hero-lg-height-preset-1:   rem-calc(434);
     @include media-breakpoint-up(xl) {
         padding: $header-body-xl-height 0 0 0;
     }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(black, 0.26);
+    }
 }
 
 //-----------------------------------------------------------------
@@ -98,8 +108,6 @@ $hero-lg-height-preset-1:   rem-calc(434);
 //-----------------------------------------------------------------
 
 .lv-hero-item-caption {
-    // padding: $spacer * 1.5 0;
-    // margin: rem-calc(30 0);
     color: white;
 }
 

@@ -2,4 +2,90 @@
 layout: base__page
 ---
 
-{{ content }}
+{% assign qualifications = page.qualifications %}
+{% assign further_training = page.further_training %}
+
+{% capture profile %}
+	<p><img width="100%" src="/assets/img/ui/no-face.png" alt="Profile Photo"></p>
+	<p><a class="icon-link d-inline-flex" href="mailto:john.smith@email-address.com"><i class="fa fa-envelope mr-2"></i><span class="text">john.smith@email-address.com</span></a></p>
+{% endcapture %}
+
+<div class="row">
+	<div class="col-md-4 col-lg-3">
+
+		<!-- PHOTO -->
+		<div class="hidden-sm-down">
+			{{ profile }}
+		</div>
+
+	</div>
+	<div class="col-md-8 col-lg-9 pl-md-4 px-lg-4 px-xl-5">
+
+		<!-- HEADING -->
+		<h1 class="h2">John Smith</h1>
+		<p class="lead mb-4"><b>{{ page.lead }}</b></p>
+
+		<!-- PHOTO -->
+		<div class="hidden-md-up">
+			{{ profile }}
+		</div>
+
+		{{ content }}
+
+		<div class="spacer mb-3"></div>
+
+		<!-- QUALIFICATIONS / TRAINING -->
+		<div class="row">
+			<div class="col-lg-6">
+				<h3 class="h4">Qualifications</h3>
+				<ul class="wysiwyg">
+					{% for item in qualifications %}
+						<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+				<div class="spacer mb-3"></div>
+			</div>
+			<div class="col-lg-6">
+				<h3 class="h4">Further training, accreditation and memberships</h3>
+				<ul class="wysiwyg">
+					{% for item in further_training %}
+						<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% contentfor content_additional %}
+	<!-- ALSO IN OUR TEAM -->
+	<section class="section section-light">
+		<div class="container">
+			<h2 class="text-center">Also in our team</h2>
+			<div class="row justify-content-center">
+				<div class="col-lg-9 col-xl-8">
+					<ul class="block-grid-md-3 mb-4">
+						{% for item in site.data.lorem_ipsum limit: 3 %}
+							<li>
+								<a href="/our-people/our-people-item/" class="btn-tile">
+									<article class="media-article">
+
+										<div class="btn-tile-img mb-3">
+											<img width="100%" src="/assets/img/ui/no-face.png" alt="{{ item.title }}">
+											<span class="btn-tile-bg" style="background-image: url(/assets/img/ui/no-face.png)"></span>
+										</div>
+
+										<h5 class="mb-2">John Smith</h5>
+										<!-- TRUNCATE 150 chars -->
+										<p class="mb-1">{{ item.body | truncate: 150 }}</p>
+										<span class="anchor-link">Read More <i class="fa fa-angle-right"></i></span>
+									</article>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endcontentfor %}

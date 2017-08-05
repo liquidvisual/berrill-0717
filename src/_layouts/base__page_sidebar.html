@@ -19,14 +19,11 @@ layout: base
                     <div class="ml-lg-5">
                         <h1 class="display-2 mb-4">{{ page.title }}</h1>
                         <p class="h5">{{ page.lead }}</p>
-                        <div class="wysiwyg">
-                            {{ content }}
-                        </div>
+                        {{ content }}
                     </div>
                 </div>
                 <div class="col-lg-3 pull-lg-9">
                     <aside class="sidebar">
-
                         {% contentblock sidebar no-convert %}
                         {% ifnothascontent sidebar %}
                             {% include snippets/side_nav.html exclude_top_level=true %}

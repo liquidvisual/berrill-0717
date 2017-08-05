@@ -104,15 +104,9 @@ hero: /assets/img/content/hero/hero-1-placeholder.png
 
 ---
 
-<!-- { % include snippets/navigation.html %} -->
+{% include snippets/navigation.html %}
 
 <br>
-
-## Component Library
-
-Use this page as a reference when tweaking values. This will prevent things breaking across components.
-
-<p><a class="btn btn-primary btn-text" href="/docs/component-library/">Access Component Library <i class="fa fa-angle-right"></i></a></p>
 
 ## Bootstrap 4
 
@@ -124,7 +118,7 @@ This codebase is running Bootstrap 4 (Alpha v6). Despite being an alpha, it's th
 
 You will likely see lots of weird classes around the place. Eg. <code>.mb-0</code> - these are utility classes from Bootstrap which allow us to set arbitrary spacing between elements without having to hard code those values separately.
 
-<b><a href="http://v4-alpha.getbootstrap.com/components/utilities/" target="_blank">Visit utilities here</a></b>
+<b><a href="http://v4-alpha.getbootstrap.com/utilities/spacing/" target="_blank">Visit utilities here</a></b>
 
 <br>
 

@@ -7,6 +7,13 @@
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// WYSIWYG
+//-----------------------------------------------------------------
+
+//=========================================
+// ANCHORS
+//=========================================
 
 .wysiwyg a {
 	color: $brand-primary;
@@ -23,11 +30,19 @@
 	}
 }
 
+//=========================================
+// LISTS
+//=========================================
+
+.wysiwyg li {
+	margin-bottom: $spacer/2;
+}
+
 //-----------------------------------------------------------------
 // IMAGE ALIGNMENT
 //-----------------------------------------------------------------
 
-.img-left {
+.image-left {
 	margin-bottom: $spacer;
 
 	@include media-breakpoint-down(sm) {
@@ -40,7 +55,7 @@
 	}
 }
 
-.img-right {
+.image-right {
 	margin-bottom: $spacer;
 
 	@include media-breakpoint-down(sm) {
@@ -50,35 +65,6 @@
 	@include media-breakpoint-up(md) {
 	    float: right;
 	    margin: 0 0 $spacer $spacer;
-	}
-}
-
-//-----------------------------------------------------------------
-// STYLED LISTS
-//-----------------------------------------------------------------
-
-.styled-list {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0;
-
-	li {
-		padding-left: rem-calc(8);
-		margin-bottom: rem-calc(5);
-
-		a:before {
-			// content: "\f0da";
-			content: "\f04b";
-			font-family: "FontAwesome";
-			position: relative;
-			top: 1px;
-			left: -5px;
-			color: $primary-color;
-		}
-	}
-
-	&[class*='block-grid'] li {
-		padding-bottom: 0; // Let list items set their own inner padding
 	}
 }
 
