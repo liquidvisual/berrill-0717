@@ -8,14 +8,23 @@ layout: base__page
 		<div class="spacer mb-4"></div>
 
 		<!-- WYSIWYG -->
-        <div class="wysiwyg mb-4">
+        <div class="wysiwyg">
             {{ content }}
         </div>
 
-        {% include featured_services.html class="block-grid-md-2" %}
 	</div>
 </div>
 
 {% contentfor content_additional %}
+	<!-- SERVICES -->
+	<section class="section pt-0">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-11">
+					{% include featured_services.html class="block-grid-md-2" %}
+				</div>
+			</div>
+		</div>
+	</section>
 	{% include sections/contact.html %}
 {% endcontentfor %}
