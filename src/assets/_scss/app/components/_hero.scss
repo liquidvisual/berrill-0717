@@ -12,9 +12,9 @@
 
 $hero-sm-height:            auto; //rem-calc(650); // IMPORTANT: if carousel slides, you need a fixed height
 $hero-md-height:            auto;
-$hero-lg-height:            rem-calc(650);
-$hero-xl-height:            rem-calc(790); //
-$hero-xxl-height:           rem-calc(790);
+$hero-lg-height:            rem-calc(740); // orig: 650
+$hero-xl-height:            rem-calc(880); // orig: 790
+$hero-xxl-height:           rem-calc(790); // not actually used
 
 $hero-sm-height-preset-1:   rem-calc(200); // Appears on product landing
 $hero-md-height-preset-1:   rem-calc(434);

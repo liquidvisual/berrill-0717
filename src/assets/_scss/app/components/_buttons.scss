@@ -110,13 +110,17 @@
 ul li:nth-child(2) .btn-cta { background-color: #1599d2; }
 ul li:nth-child(3) .btn-cta { background-color: #1292c9; }
 ul li:nth-child(4) .btn-cta { background-color: #118bc0; }
-ul li:nth-child(n+5) .btn-cta { background-color: #0782b7; }
+// ul li:nth-child(n+5) .btn-cta { background-color: #0782b7; }
+ul li:nth-child(5) .btn-cta { background-color: #0782b7; }
+ul li:nth-child(n+6) .btn-cta { background-color: lighten(#0782b7, 5%); }
 
 .lv-hero {
 	ul li:nth-child(2) .btn-cta { background-color: #17a3de; }
 	ul li:nth-child(3) .btn-cta { background-color: #1dabe8; }
 	ul li:nth-child(4) .btn-cta { background-color: #30b5ed; }
-	ul li:nth-child(n+5) .btn-cta { background-color: #3dc3fc; }
+	// ul li:nth-child(n+5) .btn-cta { background-color: #3dc3fc; }
+	ul li:nth-child(5) .btn-cta { background-color: #3dc3fc; }
+	ul li:nth-child(n+6) .btn-cta { background-color: lighten(#3dc3fc, 5%); }
 }
 
 //-----------------------------------------------------------------

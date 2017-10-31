@@ -8,7 +8,11 @@
   url: /expertise/
   include_children_in_nav: true
   children:
-    - title: TDP & Income Protection Claims
+    - title: TDP Claims
+      url: '#/expertise/'
+      featured: true
+
+    - title: Income Protection Claims
       url: '#/expertise/'
       featured: true
 
@@ -32,7 +36,7 @@
       url: '#/expertise/'
       featured: true
 
-    - title: Financial Advice Disputes
+    - title: Other Work
       url: '#/expertise/'
       featured: true
 
